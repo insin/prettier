@@ -98,6 +98,14 @@ Put the `>` of a multi-line JSX element at the end of the last line instead of b
 | ------- | ------------------------- | ---------------------------- |
 | `false` | `--jsx-bracket-same-line` | `jsxBracketSameLine: <bool>` |
 
+## JSX Space Before Closing
+
+Put a space before the `/>` of a self-closing, single-line JSX element.
+
+| Default | CLI Override                    | API Override                    |
+| ------- | ------------------------------- | ------------------------------- |
+| `true`  | `--no-jsx-space-before-closing` | `jsxSpaceBeforeClosing: <bool>` |
+
 ## Arrow Function Parentheses
 
 _available in v1.9.0+_

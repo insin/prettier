@@ -17,6 +17,7 @@ const defaults = {
   trailingComma: "none",
   bracketSpacing: true,
   jsxBracketSameLine: false,
+  jsxSpaceBeforeClosing: true,
   parser: "babylon",
   insertPragma: false,
   requirePragma: false,

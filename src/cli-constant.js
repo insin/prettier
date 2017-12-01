@@ -204,6 +204,12 @@ const detailedOptions = normalizeDetailedOptions({
     forwardToApi: true,
     description: "Put > on the last line instead of at a new line."
   },
+  "jsx-space-before-closing": {
+    type: "boolean",
+    category: CATEGORY_FORMAT,
+    forwardToApi: true,
+    description: "Put a space before a closing />."
+  },
   "list-different": {
     type: "boolean",
     category: CATEGORY_OUTPUT,
