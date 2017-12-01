@@ -1419,7 +1419,11 @@ function genericPrintNoParens(path, options, print, args) {
 
       if (n.alternate) {
         if (n.consequent.type === "BlockStatement") {
-          parts.push(" else");
+          if (options.braceStyle === "stroustrup") {
+            parts.push(hardline, "else");
+          } else {
+            parts.push(" else");
+          }
         } else {
           parts.push(hardline, "else");
         }
@@ -1591,8 +1595,19 @@ function genericPrintNoParens(path, options, print, args) {
       return concat([
         "try ",
         path.call(print, "block"),
-        n.handler ? concat([" ", path.call(print, "handler")]) : "",
-        n.finalizer ? concat([" finally ", path.call(print, "finalizer")]) : ""
+        n.handler
+          ? concat([
+              options.braceStyle === "stroustrup" ? hardline : " ",
+              path.call(print, "handler")
+            ])
+          : "",
+        n.finalizer
+          ? concat([
+              options.braceStyle === "stroustrup" ? hardline : "",
+              options.braceStyle === "stroustrup" ? "finally " : " finally ",
+              path.call(print, "finalizer")
+            ])
+          : ""
       ]);
     case "CatchClause":
       return concat([

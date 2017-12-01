@@ -22,7 +22,8 @@ const defaults = {
   requirePragma: false,
   semi: true,
   proseWrap: "preserve",
-  arrowParens: "avoid"
+  arrowParens: "avoid",
+  braceStyle: "1tbs"
 };
 
 const exampleConfig = Object.assign({}, defaults, {

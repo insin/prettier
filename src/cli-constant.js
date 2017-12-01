@@ -93,6 +93,24 @@ const detailedOptions = normalizeDetailedOptions({
       }
     ]
   },
+  "brace-style": {
+    type: "choice",
+    category: CATEGORY_FORMAT,
+    forwardToApi: true,
+    description:
+      "Specify where braces will be placed relative to their control statement and body.",
+    default: "1tbs",
+    choices: [
+      {
+        value: "1tbs",
+        description: "Place the opening brace of a block on the same line"
+      },
+      {
+        value: "stroustrup",
+        description: "Place else, catch and finally blocks on a new line"
+      }
+    ]
+  },
   "bracket-spacing": {
     type: "boolean",
     category: CATEGORY_FORMAT,

@@ -98,6 +98,38 @@ Put the `>` of a multi-line JSX element at the end of the last line instead of b
 | ------- | ------------------------- | ---------------------------- |
 | `false` | `--jsx-bracket-same-line` | `jsxBracketSameLine: <bool>` |
 
+## Brace Style
+
+_available in vTBD+_
+
+Specify where braces will be placed relative to their control statement and body.
+
+Valid options:
+
+* `"1tbs"` - The opening brace of a block is placed on the same line as its corresponding statement or declaration. Example:
+
+  ```js
+  if (foo) {
+    bar();
+  } else {
+    baz();
+  }
+  ```
+* `"stroustrup"` - `else`, `catch` and `finally` blocks will be placed on their own. Example:
+
+  ```js
+  if (foo) {
+    bar();
+  }
+  else {
+    baz();
+  }
+  ```
+
+| Default  | CLI Override                                      | API Override                                      |
+| -------- | ------------------------------------------------- | ------------------------------------------------- |
+| `"1tbs"` | <code>--brace-style <1tbs&#124;stroustrup></code> | <code>braceStyle: "<1tbs&#124;stroustrup>"</code> |
+
 ## Arrow Function Parentheses
 
 _available in v1.9.0+_
